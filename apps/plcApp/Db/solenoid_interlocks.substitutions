@@ -73,7 +73,7 @@ file "db/torus_bo_generic.db" {
 #
 # SOE Timestamps (epoch)
 #
-file "db/torus_ai_renamed.db" {
+file "db/datatype_soe.db" {
     pattern{ PLCID, P, R, PV, TAG, EGU }
     # LOWER
     { PLC_SOL, B_SOL:, MPS:, TSL_VCL_Lead_T,        Solenoid_EN2T2:7:I.Timestamp[0].OffOn[0],   "epoch" }

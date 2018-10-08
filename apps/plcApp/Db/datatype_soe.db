@@ -1,0 +1,24 @@
+#
+# datatype_soe.db
+#
+# Macros:
+#   P     - record prefix
+#   R     - record prefix
+#   PV    - record suffix
+#   TAG   - PLC tag
+#   PLCID - PLC ID set in startup
+#   EGU   - (optional)
+#   DESC  - (optional)
+#
+# Author: Brian Eng (beng@jlab.org)
+# Date:   Sept 2018
+#
+
+record(longin, "$(P)$(R)$(PV)") {
+    field(DESC, "$(DESC="")")
+    field(DTYP, "EtherIP")
+    field(SCAN, "1 second")
+    field(INP,  "@$(PLCID) $(TAG)")
+    field(EGU,  "$(EGU="")")
+    info(autosaveFields_pass0, "HIGH HIHI LOW LOLO HSV HHSV LSV LLSV")
+}
